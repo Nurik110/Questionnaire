@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    {% load crispy_forms_tags %} 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опросник</title>
+    <link rel="stylesheet" href="{% static 'css/quest.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha512-Dop/vW3iOtayerlYAqCgkVr2aTr2ErwwTYOvRFUpzl2VhCMJyjQF0Q9TjUXIo6JhuM/3i0vVEt2e/7QQmnHQqw==" crossorigin="anonymous">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha512-oBTprMeNEKCnqfuqKd6sbvFzmFQtlXS3e0C/RGFV0hD6QzhHV+ODfaQbAlmY6/q0ubbwlAM/nCJjkrgA3waLzg==" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    {% csrf_token %}
+    <script>
+        const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    </script>
+    
+    <div class="b1">
+        <div class="header">
+            <div id="menu" class="container">
+                <ul>
+                    <img src="{% static 'img/Опрос2.png' %}" width="174" height="83" alt="" class="logo">
+                    <li><a href="" accesskey="2" title="">Вопросы</a></li>
+                    <li><a href="/user" accesskey="3" title="">Ответы</a></li>
+                    {% if user.is_authenticated %}
+                    <img src="{% static 'img/profile.png' %}" width="60" height="60" alt="" style="float:right; margin: 30px 0px 0px 10px" >
+                    <a class="btn btn-outline-primary" href="/user">{{user.username|title}}</a>
+                    {% endif %}
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="rectangle">
+            <div class="block1">
+                <p>Тема опроса</p>
+                <span>Создать опрос</span>
+            </div>
+            <div class="block2">
+                <p>Вопрос <span>*</span></p>
+                <div class="answer"><input type="text" placeholder="Ответ"></div>
+                <select id="selcolor">
+                    <option> <img style="vertical-align: middle; width: 20px;" src="{% static 'img/1.png' %}" alt="" />Один из списка</option>
+                    <option value="Текст1">Текст</option>
+                </select>
+                <label class="checkbox-google">
+                    <input type="checkbox">
+                    <span class="checkbox-google-switch"><p>Обязательный вопрос</p></span>
+                </label>
+                <button><img src="{% static 'img/3.png' %}" alt="Кнопка «button»">Отправить</button>
+               
+            </div>
+            <div>
+                <button name="Добавить вопрос" value="Добавить вопрос">
+                <img src="{% static 'img/плюс.png' %}" alt="" />
+                <a style="vertical-align: middle; width: 20px; color:white; text-decoration:none">Добавить вопрос</a>
+                </button>  
+                </div>
+                                                                                                                                                                 </div>    
+            <div>    
+        </div>
+        <!-- </div> -->
+    </div>
+
+
+
+    <!-- <h1>Result</h1>
+    <div class="name">
+            Имя и Фамилия    <b>*</b>
+        <div class="nickname">
+            <input id="nickname" type="text" required>
+        </div>
+    </div>
+    <form action="" method="post" >
+        <p><b>Нравится ли тебе работать?</b></p>
+         <p><input name="dzen" type="radio" value="1" checked="checked">Да</p>
+         <p><input name="dzen" type="radio" value="0">Нет</p>
+         <p><input id="buttsubmit" type="submit" value="Выбрать"></p>
+    </form> 
+    <div class="exit">
+        <a class="exit1" href="{% url 'exit' %}">Выйти</a>
+    </div>
+    <script type="text/javascript" src="{% static 'js/quest.js' %}"></script> -->
+</body>
+</html>

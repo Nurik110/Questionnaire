@@ -1,0 +1,297 @@
+
+
+@font-face {
+    font-family: 'Robotobold';
+    src: local('fonts/roboto-bold/Roboto Bold'), local('fonts/roboto-bold/Roboto-Bold'),
+        url('fonts/roboto-bold/Roboto-Bold.woff2') format('woff2'),
+        url('fonts/roboto-bold/Roboto-Bold.woff') format('woff'),
+        url('fonts/roboto-bold/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'Robotomed';
+    src: local('fonts/roboto-med/Roboto Medium'), local('fonts/roboto-med/Roboto-Medium'),
+        url('fonts/roboto-med/Roboto-Medium.woff2') format('woff2'),
+        url('fonts/roboto-med/Roboto-Medium.woff') format('woff'),
+        url('fonts/roboto-med/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'Robotoli';
+    src: local('fonts/roboto-li/Roboto Light'), local('fonts/roboto-li/Roboto-Light'),
+        url('fonts/roboto-li/Roboto-Light.woff2') format('woff2'),
+        url('fonts/roboto-li/Roboto-Light.woff') format('woff'),
+        url('fonts/roboto-li/Roboto-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+
+
+.header{
+    background: #ECF4F5;
+    padding-bottom: 35px;
+    padding-top: 35px;
+    padding-left: 136px;
+    display: table;
+    width: 1390px;
+}
+
+.logo{
+    display: table-cell;
+    padding-right: 100px;
+}
+
+.button1{
+    display: table-cell;
+    font-family: 'Robotomed';
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+}
+
+.iw-modal-btn1{
+    text-decoration: none;
+    color: #000;
+    font-family: 'Robotomed';
+    padding-right: 20px;
+    margin-left: 40px;
+}
+
+.iw-modal1 {
+opacity: 0; /*изначально этот блок должен быть прозрачным*/ 
+pointer-events: none; /*делаем чтобы по элементу нельзя было кликнуть когда он прозрачный*/
+position: fixed; 
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 9999;
+transition: all 0.5s ease;
+margin: 0;
+padding: 0;
+}
+.iw-modal1:target {
+opacity: 1; /*при клике блок становится видимым*/
+pointer-events: auto; /*теперь по блоку можно кликать мышкой*/
+overflow-y: auto;
+}
+
+.modal1{
+    display: table-cell;
+    font-family: 'Roboto';
+    
+}
+
+
+.iw-modal-wrapper1 {
+margin-left: 1238px; /*выравниваем модальное окно по центру по горизонтали*/
+margin-top: 92px;
+
+}
+/*CSS-свойства для блока, содержащего контент модального окна */ 
+.iw-CSS-modal-inner1 {
+position: relative;
+background: #fff url("/static/img/around.png") no-repeat;  
+border: 1px solid #ccc; /*цвет и толщина рамки*/
+border-radius: 20px; /*радиус скругления углов*/
+
+}
+
+
+/*CSS для кнопки закрытия*/
+.iw-close1 {
+position:absolute;
+top:7px; /*отступ сверху*/
+right:10px; /*отступ справа*/
+font-size: 24px; /*размер шрифта*/
+color: #555; /*цвет шрифта*/
+text-decoration: none;
+}
+.iw-close1:hover, .iw-close1:focus {
+color: #000; /*цвет шрифта при наведении*/
+cursor: pointer;
+}
+/*CSS для блока с текстом*/
+.iw-modal-text1 {
+
+padding-left: 15px;
+
+    font-family: 'Robotoli';
+    
+}
+/**MEDIA**/
+@media (min-width: 200px) {
+.iw-modal-wrapper1 {
+max-width: 150px;
+    }
+}    
+    
+    .exit{
+        margin-top: 5px;
+        opacity: 0.5;
+        background: #fff;
+        border-radius: 10px;
+    }
+    .exit:hover{
+        opacity: 1;
+        background: #6DC6CC40;
+    }
+
+    .exit1{
+        text-decoration: none;
+        color: #000;
+        
+    }
+    
+    .profile2{
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .profile1{
+        opacity: 0.5;
+        background: #fff;
+        border-radius: 10px;
+    }
+    .profile1:hover{
+        opacity: 1;
+        background: #6DC6CC40;
+    }
+
+    .intro{
+        padding-left: 167px;
+        display: table;
+        border-spacing: 30px;
+    }
+
+    .block1{
+        padding-top: 50px;
+    }
+    
+    
+    
+    .doc1{
+        width: 237px;
+        height: 271px;
+        background: #ECF4F5;
+        border: #D3D3D3 1px solid;
+        box-shadow: 4px 4px 0 rgba(0,0,0,0.05);
+        display: table-cell;
+        
+    }
+.doc2{
+        width: 237px;
+        height: 271px;
+        background: #ECF4F5;
+        border: #D3D3D3 1px solid;
+        box-shadow: 4px 4px 0 rgba(0,0,0,0.05);
+        display: table-cell;  
+    }
+.doc3{
+        width: 237px;
+        height: 271px;
+        background: #ECF4F5;
+        border: #D3D3D3 1px solid;
+        box-shadow: 4px 4px 0 rgba(0,0,0,0.05);
+        display: table-cell;  
+    }
+.doc4{
+        width: 237px;
+        height: 271px;
+        background: #ECF4F5;
+        border: #D3D3D3 1px solid;
+        box-shadow: 4px 4px 0 rgba(0,0,0,0.05);
+        display: table-cell;  
+    }
+
+    .quest{
+        padding: 10px;
+        border-radius: 10px;
+    }
+    
+    .head p{
+        color: #ccc;
+        font-family: 'Robotomed';
+        font-size: 6.8px;
+    }
+
+    .head{
+        font-size: 8.4px;
+        font-family: 'Robotobold';
+        background: #fff;
+        padding: 9px;
+        margin: 0;
+    }
+
+    .name{
+        font-size: 8.4px;
+        font-family: 'Robotobold';
+        background: #fff;
+        padding: 9px;
+        margin: 10px 0 0 0;
+    }
+    .nickname{
+        border-bottom-style: dotted;
+        width: 100px;
+        color: #696565;
+        font-family: 'Robotoli';
+    }
+
+    b{
+        color: #EA2222;
+    }
+    
+    .ans{
+        font-size: 8.4px;
+        background: #fff;
+        margin: 10px 0 0 0;
+        font-family: 'Robotobold';
+        padding: 9px;
+    }
+    
+    .ans p{
+        color: #696565;
+        margin: 0;
+    }
+    
+    .block{
+        width: 217px;
+        height: 45px;
+        background: #fff;
+        padding: 10px;
+
+    }
+    
+    
+    .but{
+        text-decoration: none;
+        color: #5E5656;
+    }
+
+    .but:hover{
+        color: #000;
+        text-decoration: underline;
+    }
+    
+    .block p{
+        margin: 0;
+        font-size: 10px;
+        color: #5E5656;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+

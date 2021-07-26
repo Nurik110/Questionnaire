@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+
+<head>
+    {% load static %}
+
+    {% load crispy_forms_tags %}
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <link rel='stylesheet' media='(min-width: 1600px)' href='URL_большой.css' />
+        <link rel='stylesheet' media='(max-width: 1599px) and (min-width: 800px)' href='URL_средний.css' />
+        <link rel='stylesheet' media='(max-width: 799px)' href='URL_маленький_экран.css' /> -->
+</head>
+
+<body>
+
+    {% csrf_token %}
+    <script>
+        const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    </script>
+
+    <body>
+        <div class="navigate">
+            <div class="logo">
+                <img src="{% static 'img/logo.png' %}">
+            </div>
+            <a class="button1" href="#iw-modal1">Создать опрос</a>
+            <div class="modal">
+                <a href="#iw-modal1" class="iw-modal-btn1">Зарегистрироватся</a>
+                <div id="iw-modal1" class="iw-modal1">
+                    <div class="iw-modal-wrapper1">
+                        <div class="iw-CSS-modal-inner1">
+                            <a href="#close" title="Закрыть" class="iw-close1">×</a>
+                            <div class="logo1">
+                                <img src="{% static 'img/logo1.png' %}">
+                            </div>
+                            <div class="iw-modal-header1">
+                                <h3 class="iw-modal-title1">Регистрация</h3>
+                            </div>
+                            <form id="contactForm" method="POST">
+                                <div class="iw-modal-text1">
+                                    <div class="mail">
+                                        <fieldset>
+                                            <legend class="text">E-mail</legend>
+                                            <input type="email" name="email" placeholder="E-Mail" id="email" required>
+                                        </fieldset>
+                                    </div>
+                                    <div class="name">
+                                        <fieldset>
+                                            <legend class="text">Имя</legend>
+                                            <input type="text" id="username" required>
+                                        </fieldset>
+                                    </div>
+                                    <div class="lastname">
+                                        <fieldset>
+                                            <legend class="text">Фамилия</legend>
+                                            <input type="text" id="last_name" required>
+                                        </fieldset>
+                                    </div>
+                                    <div class="pass">
+                                        <fieldset>
+                                            <legend class="text">Пароль</legend>
+                                            <input type="password" id="password1" required>
+                                        </fieldset>
+                                    </div>
+                                    <div class="pass">
+                                        <fieldset>
+                                            <legend class="text">Повторите пароль</legend>
+                                            <input type="password" id="password2" required>
+                                        </fieldset>
+                                    </div>
+                                    <div class="reg1">
+                                        <button id="registr" type="submit" value="Зарегистрироватся">Зарегистрироватся</button>
+                                        <!-- <a class="regist1" id="registr"  href="#">Зарегистрироватся</a> -->
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal">
+                <a href="#iw-modal" class="iw-modal-btn">Вход</a>
+                <div id="iw-modal" class="iw-modal">
+                    <div class="iw-modal-wrapper">
+                        <div class="iw-CSS-modal-inner">
+                            <a href="#close" title="Закрыть" class="iw-close">×</a>
+                            <div class="logo1">
+                                <img src="{% static 'img/logo1.png' %}">
+                            </div>
+                            <div class="iw-modal-header">
+                                <h3 class="iw-modal-title">Вход</h3>
+                            </div>
+                            <form method="POST" class="post-form">
+                                
+                            <div class="iw-modal-text">
+                                <div class="mail">
+                                    <fieldset>
+                                        <legend class="text">E-mail</legend>
+                                        <input id="emaill" type="email" required>
+                                    </fieldset>
+                                </div>
+                                <div class="pass">
+                                    <fieldset>
+                                        <legend class="text">Пороль</legend>
+                                       <input id="passwordd" type="password" required>
+                                    </fieldset>
+                                </div>
+                                <div class="reg">
+                                    <a id="regist" class="regist" href="#">Войти</a>
+                                    
+                                </div>
+                                
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="intro">
+            <div class="left">
+                <p class="text1">Хочешь узнать о чем<br>
+                    думает ваша<br> аудитория</p>
+                <p class="text2">Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit. </p>
+                <a class="button2" href="#iw-modal1">Создать опрос
+                </a>
+            </div>
+            <div class="right">
+                <img src="{% static 'img/img1.png' %}">
+            </div>
+        </div>
+        <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+        
+    </body>
+
+</html>

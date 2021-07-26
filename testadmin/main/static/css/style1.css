@@ -1,0 +1,237 @@
+body{
+    background: url("/static/img/Vector.png") no-repeat;
+}
+
+@font-face {
+    font-family: 'Robotobold';
+    src: local("fonts/roboto-bold/Roboto Bold"), local("fonts/roboto-bold/Roboto-Bold"),
+        url("{% static 'fonts/roboto-bold/Roboto-Bold.woff2' %}") format('woff2'),
+        url("{% static 'fonts/roboto-bold/Roboto-Bold.woff' %}") format('woff'),
+        url("{% static 'fonts/roboto-bold/Roboto-Bold.ttf' %}") format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Robotomed';
+    src: local('fonts/roboto-med/Roboto Medium'), local('fonts/roboto-med/Roboto-Medium'),
+        url("{% static 'fonts/roboto-med/Roboto-Medium.woff2' %}") format('woff2'),
+        url("{% static 'fonts/roboto-med/Roboto-Medium.woff' %}") format('woff'),
+        url("{% static 'fonts/roboto-med/Roboto-Medium.ttf' %}") format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Robotoli';
+    src: local('fonts/roboto-li/Roboto Light'), local('fonts/roboto-li/Roboto-Light'),
+        url("{% static 'fonts/roboto-li/Roboto-Light.woff2' %}") format('woff2'),
+        url("{% static 'fonts/roboto-li/Roboto-Light.woff' %}") format('woff'),
+        url("{% static 'fonts/roboto-li/Roboto-Light.ttf' %}") format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+.navigate{
+    display: table;
+    padding-left: 128px;
+
+}
+
+.logo{
+    display:table-cell;
+}
+
+.button1{
+    display: table-cell;
+    font-family: 'Robotomed';
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+}
+.button5{
+    display: table-cell;
+    padding-left: 420px;
+    width: 292px;
+    height: 40px;
+    font-family: 'Robotomed';
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+}
+
+.button4{
+    display: table-cell;
+    font-family: 'Robotomed';
+    text-decoration: none;
+    color: #000;
+    padding-right: 20px;
+}
+
+/*РЕГИСТРАЦИЯ*/
+
+
+
+.iw-modal-btn1{
+    text-decoration: none;
+    color: #000;
+    font-family: 'Robotomed';
+    padding-right: 20px;
+    margin-left: 40px;
+}
+
+.iw-modal1 {
+opacity: 0; /*изначально этот блок должен быть прозрачным*/ 
+pointer-events: none; /*делаем чтобы по элементу нельзя было кликнуть когда он прозрачный*/
+position: fixed; 
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 9999;
+transition: all 0.5s ease;
+margin: 0;
+padding: 0;
+}
+.iw-modal1:target {
+opacity: 1; /*при клике блок становится видимым*/
+pointer-events: auto; /*теперь по блоку можно кликать мышкой*/
+overflow-y: auto;
+}
+
+.modal1{
+    display: table-cell;
+    font-family: 'Roboto';
+    
+}
+
+
+.iw-modal-wrapper1 {
+margin-left: 1238px; /*выравниваем модальное окно по центру по горизонтали*/
+margin-top: 92px;
+
+}
+/*CSS-свойства для блока, содержащего контент модального окна */ 
+.iw-CSS-modal-inner1 {
+position: relative;
+background: #fff url("/static/img/around.png") no-repeat;  
+border: 1px solid #ccc; /*цвет и толщина рамки*/
+border-radius: 20px; /*радиус скругления углов*/
+
+}
+
+
+/*CSS для кнопки закрытия*/
+.iw-close1 {
+position:absolute;
+top:7px; /*отступ сверху*/
+right:10px; /*отступ справа*/
+font-size: 24px; /*размер шрифта*/
+color: #555; /*цвет шрифта*/
+text-decoration: none;
+}
+.iw-close1:hover, .iw-close1:focus {
+color: #000; /*цвет шрифта при наведении*/
+cursor: pointer;
+}
+/*CSS для блока с текстом*/
+.iw-modal-text1 {
+
+padding-left: 15px;
+
+    font-family: 'Robotoli';
+    
+}
+/**MEDIA**/
+@media (min-width: 200px) {
+.iw-modal-wrapper1 {
+max-width: 150px;
+    }
+}    
+    
+    .exit{
+        margin-top: 5px;
+        opacity: 0.5;
+        background: #fff;
+        border-radius: 10px;
+    }
+    .exit:hover{
+        opacity: 1;
+        background: #6DC6CC40;
+    }
+
+    .exit1{
+        text-decoration: none;
+        color: #000;
+        
+    }
+    
+    .profile2{
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .profile1{
+        opacity: 0.5;
+        background: #fff;
+        border-radius: 10px;
+    }
+    .profile1:hover{
+        opacity: 1;
+        background: #6DC6CC40;
+    }
+
+/*ГЛАВНЫЙ ЭКРАН*/    
+    
+    
+.intro{
+    padding-left: 138px;
+    display: table;
+    padding-top: 100px;
+    background: url("/static/img/Vector1.png") no-repeat;
+    background-position: 750px -90px;
+    padding-bottom: 127px;
+}
+
+
+
+.text1{
+    font-family: 'Robotobold';
+    font-size: 48px;
+    margin: 0;
+}
+
+
+.text2{
+    font-family: 'Robotoli';
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+
+
+
+.button2{
+    text-decoration: none;
+    color: #fff;
+    background: #6DC6CC;
+    padding: 12px 36px;
+    border-radius: 10px;
+    font-family: 'Robotobold';
+    font-size: 18px;
+}
+
+
+.left{
+    display: table-cell;
+    float: left;
+}
+
+.right{
+    display: table-cell;
+    padding-left: 150px;
+}
+
+.line2{
+    position: relative;  
+}

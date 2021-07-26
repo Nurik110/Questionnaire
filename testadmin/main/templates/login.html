@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+        {% load static %}
+
+        {% load crispy_forms_tags %}
+        <meta charset="utf-8">
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.ico' %}" />
+        <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+<!--        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+
+    </head>
+    <body>
+        {% csrf_token %}
+        <div class="navigate">
+            <div class="logo">
+                <img src="{% static 'img/logo.png' %}">
+            </div>
+            <a class="button5" href="/user">Результаты</a>
+                <a class="button1" href="/questionnaire">Создать опрос</a>
+                        <div class="modal1">
+                            {% if user.is_authenticated %}
+        <a href="#iw-modal1" class="iw-modal-btn1"><img src="{% static 'img/profile.png' %}"></a>
+        <a class="btn btn-outline-primary" href="/user">{{user.username|title}}</a>
+        {% endif %}
+    <div id="iw-modal1" class="iw-modal1">
+    <div class="iw-modal-wrapper1">
+    <div class="iw-CSS-modal-inner1">
+    <a href="#close" title="Закрыть" class="iw-close1">×</a>
+    <div class="iw-modal-text1"> 
+    <div class="profile1">
+        <a class="profile2" href="#">Профиль</a>
+    </div>
+    <div class="exit">
+        <a class="exit1" href="{% url 'exit' %}">Выйти</a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+        </div>
+        
+        <div class="intro">
+            <div class="left">
+            <p class="text1">Хочешь узнать о чем<br> 
+                думает ваша<br> аудитория</p>
+            <p class="text2">Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit. </p>
+            <a class="button2" href="#">Создать опрос
+            </a>
+            
+            </div>
+            <div class="right">
+                <img src="{% static 'img/img1.png' %}">
+            </div>
+        </div>
+        
+    </body>
+</html>
